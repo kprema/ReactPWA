@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import {HashRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 
 const NavBar = () => (
@@ -31,12 +31,12 @@ const CompletedTasks = () => (
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Route exact path='/' component={CurrentTasks} />
           <Route path='/completed' component={CompletedTasks} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
